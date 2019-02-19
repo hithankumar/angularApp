@@ -15,9 +15,10 @@ pipeline {
             }
         }
         stage('Test') {
-            steps {
-                sh './jenkins/scripts/test.sh'
+            withEnv(["CHROME_BIN=/usr/bin/chromium-browser"]) {
+            sh 'ng test --progress=false --watch false'
             }
+            junit '**/test-results.xml'
         }
         stage('Deliver') { 
             steps {
