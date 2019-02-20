@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'sudo npm install @angular/cli -g'
+                sh 'npm install @angular/cli -g'
                 sh 'npm i --unsafe-perm' 
             }
         }
