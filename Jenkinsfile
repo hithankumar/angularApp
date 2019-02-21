@@ -11,19 +11,20 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'npm install'
-                sh 'ng version'
+               // sh 'npm install'
+               // sh 'ng version'
+               sh 'npm run ng -- build'
             }
         }
-        stage('Test') {
-            steps {
-                sh 'ng test --progress=false --watch false'
-            }
+        // stage('Test') {
+        //     steps {
+        //         sh 'ng test --progress=false --watch false'
+        //     }
            
-            // withEnv(["CHROME_BIN=/usr/bin/chromium-browser"]) {
-            //     sh 'ng test --progress=false --watch false'
-            // }
-        }
+        //     // withEnv(["CHROME_BIN=/usr/bin/chromium-browser"]) {
+        //     //     sh 'ng test --progress=false --watch false'
+        //     // }
+        // }
         
         // stage('Deliver') { 
         //     steps {
