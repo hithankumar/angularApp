@@ -16,7 +16,10 @@ pipeline {
             }
         }
         stage('Test') {
-            sh 'ng test --progress=false --watch false'
+            steps {
+                sh 'ng test --progress=false --watch false'
+            }
+           
             // withEnv(["CHROME_BIN=/usr/bin/chromium-browser"]) {
             //     sh 'ng test --progress=false --watch false'
             // }
