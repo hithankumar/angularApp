@@ -11,16 +11,16 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-               // sh 'npm install -g @angular/cli@6.1.4'
                 sh 'npm install'
-                //sh 'npm install' 
+                sh 'ng version'
             }
         }
-        // stage('Test') {
-        //     withEnv(["CHROME_BIN=/usr/bin/chromium-browser"]) {
-        //         sh 'ng test --progress=false --watch false'
-        //     }
-        // }
+        stage('Test') {
+            sh 'ng test --progress=false --watch false'
+            // withEnv(["CHROME_BIN=/usr/bin/chromium-browser"]) {
+            //     sh 'ng test --progress=false --watch false'
+            // }
+        }
         
         // stage('Deliver') { 
         //     steps {
