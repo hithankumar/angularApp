@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'node:6-alpine' 
+            image 'node:8.12-alpine' 
             args '-p 3000:3000' 
         }
     }
@@ -13,6 +13,7 @@ pipeline {
             steps {
                // sh 'npm install'
                // sh 'ng version'
+               sh 'node -v'
                sh 'npm run ng -- build'
             }
         }
