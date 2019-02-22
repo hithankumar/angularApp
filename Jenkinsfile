@@ -16,8 +16,6 @@ pipeline {
                // sh 'ng version'
                sh 'node -v'
                sh 'npm install'
-               sh 'npm uninstall phantomjs'
-               sh 'npm install phantomjs -g'
                sh 'npm run test'
                //sh 'npm run build'
                //sh 'ng build --no-aot --no-build-optimizer --base-href ./'
