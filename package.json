@@ -45,6 +45,7 @@
         "core-js": "^2.4.1",
         "d3": "3.5.6",
         "element-resize-detector": "^1.1.9",
+        "intl": "^1.2.5",
         "json2csv": "^3.11.5",
         "karma-read-json": "^1.1.0",
         "lodash": ">=4.6",
@@ -61,7 +62,7 @@
         "zone.js": "0.8.26"
     },
     "devDependencies": {
-        "@angular-devkit/build-angular": "~0.7.0",
+        "@angular-devkit/build-angular": "^0.7.5",
         "@angular/cli": "^6.1.4",
         "@types/angular": "1.6.20",
         "@types/d3": "5.0.0",
@@ -70,16 +71,20 @@
         "@types/jquery": "1.10.32",
         "@types/node": "~6.0.60",
         "@types/nvd3": "1.8.37",
+        "angular-ui-router": "^1.0.20",
         "codelyzer": "~4.2.0",
         "del": "2.2.2",
         "enhanced-resolve": "3.3.0",
         "gulp": "^3.9.1",
         "gulp-angular-templatecache": "^2.0.0",
+        "jasmine": "~2.5.2",
+        "jasmine-core": "~2.5.2",
         "jasmine-spec-reporter": "~4.2.1",
         "karma": "~2.0.0",
         "karma-chrome-launcher": "~2.2.0",
         "karma-cli": "^1.0.1",
         "karma-coverage-istanbul-reporter": "^1.2.1",
+        "karma-jasmine": "~1.1.2",
         "karma-jasmine-html-reporter": "^0.2.2",
         "karma-phantomjs-launcher": "^1.0.4",
         "karma-teamcity-reporter": "^1.1.0",
@@ -91,11 +96,7 @@
         "ts-node": "^3.3.0",
         "tslint": "^5.0.0",
         "typescript": "2.9.2",
-        "webdriver-manager": "10.2.5",
-        "angular-ui-router": "^1.0.20",
-        "jasmine": "~2.5.2",
-        "jasmine-core": "~2.5.2",
-        "karma-jasmine": "~1.1.2"
+        "webdriver-manager": "10.2.5"
     },
     "repository": {}
 }
