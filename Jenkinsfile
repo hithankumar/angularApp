@@ -15,7 +15,8 @@ pipeline {
                // sh 'ng version'
                sh 'node -v'
                sh 'npm install'
-               sh 'npm run build'
+               sh 'npm run test'
+               //sh 'npm run build'
                //sh 'ng build --no-aot --no-build-optimizer --base-href ./'
                //sh 'ls'
             }
