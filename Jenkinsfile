@@ -6,7 +6,7 @@ pipeline {
         }
     }
     environment {
-        CI = 'true',
+        CI = 'true'
         PHANTOMJS_BIN: C:\NPM\Modules\PhantomJS.cmd
     }
     stages {
