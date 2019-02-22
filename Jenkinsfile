@@ -10,9 +10,7 @@ pipeline {
     }
     stages {
         stage('Build') { 
-            environment { 
-                PHANTOMJS_BIN: C:\NPM\Modules\PhantomJS.cmd
-            }
+
             steps {
                // sh 'npm install'
                // sh 'ng version'
