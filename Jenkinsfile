@@ -14,6 +14,7 @@ pipeline {
                // sh 'npm install'
                // sh 'ng version'
                sh 'node -v'
+               sh 'npm run ng build'
                sh 'ng --version'
             }
         }
