@@ -6,7 +6,8 @@ pipeline {
         }
     }
     environment {
-        CI = 'true'       
+        CI = 'true'     
+        PHANTOMJS_BIN = C:\NPM\Modules\PhantomJS.cmd
     }
     stages {
         stage('Build') { 
@@ -16,21 +17,23 @@ pipeline {
                // sh 'ng version'
                sh 'node -v'
                sh 'npm install'
-               sh 'npm run test'
+               
                //sh 'npm run build'
                //sh 'ng build --no-aot --no-build-optimizer --base-href ./'
                //sh 'ls'
             }
         }
-        // stage('Test') {
-        //     steps {
-        //         sh 'ng test --progress=false --watch false'
-        //     }
+        stage('Test') {
+            steps {
+                // sh 'cd ${JENKINS_HOME}/path/to/unit/tests && phantomjs phantomjs-runner.js tests.html'
+                sh 'npm run test'
+               // sh 'ng test --progress=false --watch false'
+            }
            
-        //     // withEnv(["CHROME_BIN=/usr/bin/chromium-browser"]) {
-        //     //     sh 'ng test --progress=false --watch false'
-        //     // }
-        // }
+            // withEnv(["CHROME_BIN=/usr/bin/chromium-browser"]) {
+            //     sh 'ng test --progress=false --watch false'
+            // }
+        }
         
         // stage('Deliver') { 
         //     steps {
