@@ -30,6 +30,13 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     singleRun: true,
-    concurrency: Infinity
+    concurrency: Infinity,
+    flags: [
+      '--disable-web-security',
+      '--disable-gpu',
+      '--no-sandbox',
+      '--disable-setuid-sandbox',
+      '--remote-debugging-port=9222',
+    ]
   });
 };
