@@ -5,7 +5,13 @@ process.env.CHROME_BIN = puppeteer.executablePath();
 
 module.exports = function (config) {
   config.set({
-    browsers: ['ChromeHeadless'],
+    browsers: ['HeadlessChrome'],
+    customLaunchers:{
+      HeadlessChrome:{
+        base: 'ChromeHeadless',
+        flags: ['--no-sandbox']
+      }
+    },
     basePath: '',
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
     plugins: [
@@ -31,14 +37,14 @@ module.exports = function (config) {
     autoWatch: true,
     singleRun: true,
     concurrency: Infinity,
-    flags: [
-      '--disable-web-security',
-      '--disable-gpu',
-      '--no-sandbox',
-      '--disable-setuid-sandbox',
-      '--remote-debugging-port=9222',
-      '--proxy-bypass-list=*',
-      '--proxy-server=\'http://localhost:8084\''
-    ]
+    // flags: [
+    //   '--disable-web-security',
+    //   '--disable-gpu',
+    //   '--no-sandbox',
+    //   '--disable-setuid-sandbox',
+    //   '--remote-debugging-port=9222',
+    //   '--proxy-bypass-list=*',
+    //   '--proxy-server=\'http://localhost:8084\''
+    // ]
   });
 };
