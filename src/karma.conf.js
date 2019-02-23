@@ -37,6 +37,8 @@ module.exports = function (config) {
       '--no-sandbox',
       '--disable-setuid-sandbox',
       '--remote-debugging-port=9222',
+      '--proxy-bypass-list=*',
+      '--proxy-server=\'http://localhost:8084\''
     ]
   });
 };
