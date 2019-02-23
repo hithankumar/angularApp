@@ -25,7 +25,7 @@ pipeline {
         stage('Test') {
             steps {
                 // sh 'cd ${JENKINS_HOME}/path/to/unit/tests && phantomjs phantomjs-runner.js tests.html'
-                sh 'npm install phantomjs-prebuilt'
+                sh 'sudo npm install -g phantomjs@2.1.1 --unsafe-perm'
                 sh 'cd ~/bin'
                 sh 'ln -s ../node_modules/phantomjs-prebuilt/bin/phantomjs'
                 sh 'phantomjs --version'
