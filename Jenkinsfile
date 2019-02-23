@@ -28,8 +28,8 @@ pipeline {
                 //sh 'npm install -g phantomjs@2.1.1 --unsafe-perm'
                // sh 'cd ~/bin'
                // sh 'ln -s ../node_modules/phantomjs-prebuilt/bin/phantomjs'
-                sh 'phantomjs --version'
-                //sh 'npm run test'
+                //sh 'phantomjs --version'
+                sh 'npm run test'
                // sh 'ng test --progress=false --watch false'
             }
            
