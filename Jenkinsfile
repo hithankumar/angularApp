@@ -26,7 +26,10 @@ pipeline {
         stage('Test') {
             steps {
                 // sh 'cd ${JENKINS_HOME}/path/to/unit/tests && phantomjs phantomjs-runner.js tests.html'
-                sh 'npm run test'
+                sh 'cd ~/bin'
+                sh 'ln -s ../node_modules/phantomjs-prebuilt/bin/phantomjs'
+                sh 'phantomjs --version'
+                //sh 'npm run test'
                // sh 'ng test --progress=false --watch false'
             }
            
