@@ -29,7 +29,7 @@ pipeline {
                // sh 'cd ~/bin'
                // sh 'ln -s ../node_modules/phantomjs-prebuilt/bin/phantomjs'
                 //sh 'phantomjs --version'
-                sh 'npm run test'
+                sh 'npm run test -- -cc -sr --browser HeadlessChrome'
                // sh 'ng test --progress=false --watch false'
             }
            
