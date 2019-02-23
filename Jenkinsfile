@@ -16,27 +16,29 @@ pipeline {
                // sh 'ng version'
                sh 'node -v'
                sh 'npm install'
+               sh 'npm rebuild'
+               sh 'npm run test'
                
                //sh 'npm run build'
                //sh 'ng build --no-aot --no-build-optimizer --base-href ./'
                //sh 'ls'
             }
         }
-        stage('Test') {
-            steps {
-                // sh 'cd ${JENKINS_HOME}/path/to/unit/tests && phantomjs phantomjs-runner.js tests.html'
-                //sh 'npm install -g phantomjs@2.1.1 --unsafe-perm'
-               // sh 'cd ~/bin'
-               // sh 'ln -s ../node_modules/phantomjs-prebuilt/bin/phantomjs'
-                //sh 'phantomjs --version'
-                sh 'npm run test -- -cc -sr --browser HeadlessChrome'
-               // sh 'ng test --progress=false --watch false'
-            }
+        // stage('Test') {
+        //     steps {
+        //         // sh 'cd ${JENKINS_HOME}/path/to/unit/tests && phantomjs phantomjs-runner.js tests.html'
+        //         //sh 'npm install -g phantomjs@2.1.1 --unsafe-perm'
+        //        // sh 'cd ~/bin'
+        //        // sh 'ln -s ../node_modules/phantomjs-prebuilt/bin/phantomjs'
+        //         //sh 'phantomjs --version'
+        //        // sh 'npm run test -- -cc -sr --browser HeadlessChrome'
+        //        // sh 'ng test --progress=false --watch false'
+        //     }
            
-            // withEnv(["CHROME_BIN=/usr/bin/chromium-browser"]) {
-            //     sh 'ng test --progress=false --watch false'
-            // }
-        }
+        //     // withEnv(["CHROME_BIN=/usr/bin/chromium-browser"]) {
+        //     //     sh 'ng test --progress=false --watch false'
+        //     // }
+        // }
         
         // stage('Deliver') { 
         //     steps {
