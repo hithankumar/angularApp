@@ -11,10 +11,14 @@ module.exports = function (config) {
         base: 'ChromiumHeadless',
         flags: [
           '--no-sandbox',
-          '--disable-setuid-sandbox',
-          '--disable-gpu',
           '--remote-debugging-port=9222',
-          '--disable-web-security',]
+          '--enable-logging',
+          '--user-data-dir=./karma-chrome',
+          '--v=1',
+          '--disable-background-timer-throttling',
+          '--disable-renderer-backgrounding',
+          '--proxy-bypass-list=*',
+          '--proxy-server=\'direct://\'']
       }
     },
     basePath: '',
