@@ -7,7 +7,7 @@ module.exports = function (config) {
   config.set({
     customLaunchers:{
       HeadlessChrome:{
-        base: 'Chrome',
+        base: 'ChromeHeadless',
         flags: [
           '--headless', 
           '--remote-debugging-port=9222',
@@ -17,15 +17,15 @@ module.exports = function (config) {
       }
     },
     browsers: ['HeadlessChrome'],
-   // basePath: '',
-    frameworks: ['jasmine', '@angular-devkit/build-angular'],
+    basePath: 'build/',
+    frameworks: ['jasmine'],
     plugins: [
       require('karma-jasmine'),
       require('karma-chrome-launcher'),
       //require('karma-phantomjs-launcher'),
-      require('karma-jasmine-html-reporter'),
-      require('karma-coverage-istanbul-reporter'),
-      require('@angular-devkit/build-angular/plugins/karma')
+      // require('karma-jasmine-html-reporter'),
+      // require('karma-coverage-istanbul-reporter'),
+      // require('@angular-devkit/build-angular/plugins/karma')
     ],
     client: {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
@@ -35,6 +35,8 @@ module.exports = function (config) {
       reports: ['html', 'lcovonly'],
       fixWebpackSourcePaths: true
     },
+    browserNoActivityTimeout: 120000,
+    urlRoot: '/build/',
     reporters: ['progress', 'kjhtml'],
     port: 9877,
     colors: true,
