@@ -9,15 +9,11 @@ module.exports = function (config) {
       HeadlessChrome:{
         base: 'Chrome',
         flags: [
-          '--no-sandbox',
+          '--headless', 
           '--remote-debugging-port=9222',
-          '--enable-logging',
-          '--user-data-dir=./karma-chrome',
-          '--v=1',
-          '--disable-background-timer-throttling',
-          '--disable-renderer-backgrounding',
-          '--proxy-bypass-list=*',
-          '--proxy-server=\'direct://\'']
+          '--no-sandbox', 
+          '--proxy-server=\'direct://\'',
+          '--proxy-bypass-list=*']
       }
     },
     browsers: ['HeadlessChrome'],
