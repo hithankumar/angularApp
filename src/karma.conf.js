@@ -2,27 +2,19 @@
 // https://karma-runner.github.io/1.0/config/configuration-file.html
 const process = require('process');
 process.env.CHROME_BIN = require('puppeteer').executablePath();
-const webdriver = require('selenium-webdriver');
 
 module.exports = function (config) {
   config.set({
     customLaunchers:{
       HeadlessChrome:{
-        // base: 'Chrome',
-        // flags: [
-        //   '--headless', 
-        //   '--remote-debugging-port=9222',
-        //   '--no-sandbox', 
-        //   '--proxy-server=\'direct://\'',
-        //   '--proxy-bypass-list=*']
-        base: 'SeleniumWebdriver',
-        browserName: 'Chrome',
-        getDriver: function() {
-        return new webdriver.Builder()
-                .forBrowser('chrome')
-                .usingServer('http://localhost:8084/wd/hub') // Docker is run using docker run -d -p 4444:4444 -v /dev/shm:/dev/shm selenium/standalone-chrome
-                .build()
-        }
+        base: 'Chrome',
+        flags: [
+          '--headless', 
+          '--remote-debugging-port=9222',
+          '--no-sandbox', 
+          '--proxy-server=\'direct://\'',
+          '--proxy-bypass-list=*']
+  
       }
     },
     browsers: ['HeadlessChrome'],
