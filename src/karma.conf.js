@@ -2,7 +2,6 @@
 // https://karma-runner.github.io/1.0/config/configuration-file.html
 const process = require('process');
 process.env.CHROME_BIN = require('puppeteer').executablePath();
-const isDocker = require('is-docker')();
 
 module.exports = function (config) {
   config.set({
@@ -10,7 +9,7 @@ module.exports = function (config) {
     customLaunchers:{
       HeadlessChrome:{
         base: 'ChromeHeadless',
-        flags: isDocker ? ['--no-sandbox'] : []
+        flags: '--no-sandbox'
       }
     },
     basePath: '',
