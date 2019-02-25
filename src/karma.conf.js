@@ -6,13 +6,18 @@ process.env.CHROME_BIN = require('puppeteer').executablePath();
 module.exports = function (config) {
   config.set({
     browsers: ['HeadlessChrome'],
+    browserDisconnectTimeout: 10000,
+    browserDisconnectTolerance: 3,
+    browserNoActivityTimeout: 60000,
     customLaunchers:{
       HeadlessChrome:{
         base: 'ChromeHeadless',
-        flags: ['--no-sandbox',
-        '--disable-setuid-sandbox',
-        '--disable-gpu',
-        '--remote-debugging-port=9877',]
+        flags: [
+          '--no-sandbox',
+          '--disable-setuid-sandbox',
+          '--disable-gpu',
+          '--remote-debugging-port=9877',
+          '--disable-web-security',]
       }
     },
     basePath: '',
