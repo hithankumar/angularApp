@@ -15,7 +15,9 @@ pipeline {
                // sh 'ng version'
                sh 'node -v'
                sh 'npm install'
-               sh 'npm rebuild'
+               sh 'npm install cross-env'
+               sh 'set -x'
+               sh 'set +x'
                sh 'npm run test'
                
                //sh 'npm run build'
