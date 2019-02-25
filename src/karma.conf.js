@@ -12,7 +12,7 @@ module.exports = function (config) {
         flags: ['--no-sandbox',
         '--disable-setuid-sandbox',
         '--disable-gpu',
-        '--remote-debugging-port=8084',]
+        '--remote-debugging-port=9877',]
       }
     },
     basePath: '',
