@@ -7,7 +7,7 @@ module.exports = function (config) {
   config.set({
     customLaunchers:{
       HeadlessChrome:{
-        base: 'ChromeHeadless',
+        base: 'Chrome',
         flags: [
           '--headless', 
           '--remote-debugging-port=9222',
