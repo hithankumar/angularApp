@@ -5,7 +5,7 @@
     "description": "Test app",
     "scripts": {
         "ng": "ng",
-        "build": "ng build",
+        "build": "ng build --prod",
         "start": "ng serve",
         "test": "ng test  --code-coverage",
         "lint": "tslint ./src/**/*.ts -t verbose",
