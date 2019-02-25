@@ -8,7 +8,7 @@ module.exports = function (config) {
     browsers: ['HeadlessChrome'],
     customLaunchers:{
       HeadlessChrome:{
-        base: 'ChromeHeadless',
+        base: 'ChromiumHeadless',
         flags: [
           '--no-sandbox',
           '--disable-setuid-sandbox',
