@@ -15,6 +15,7 @@ pipeline {
                // sh 'ng version'
                sh 'node -v'
                sh 'npm install'
+               sh 'npm i puppeteer --save'
                sh 'npm run test'
                
                //sh 'npm run build'
