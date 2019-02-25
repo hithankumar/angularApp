@@ -9,7 +9,10 @@ module.exports = function (config) {
     customLaunchers:{
       HeadlessChrome:{
         base: 'ChromeHeadless',
-        flags: ['--no-sandbox']
+        flags: ['--no-sandbox',
+        '--disable-setuid-sandbox',
+        '--disable-gpu',
+        '--remote-debugging-port=9222',]
       }
     },
     basePath: '',
