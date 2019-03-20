@@ -7,7 +7,19 @@ import { Component } from '@angular/core';
 export class FirstComponent {
   title = 'my-apasdaasdasdsdp';
   constructor(){
-    console.log('asdsdfsasdaasdasdasdasdasdasdsdasddasd');
+    console.log('asdsdfsasdaasdasdasdasdasdasdasdasdsdasddasd');
+    this.test();
+    this.test1();
+    this.test23();
+  }
+  test(){
+      
+  }
+  test1 (){
+
+  }
+  test23(){
+
   }
   
 }
