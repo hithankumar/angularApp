@@ -5,9 +5,9 @@ import { Component } from '@angular/core';
   template: '<div>asd</div>'
 })
 export class FirstComponent {
-  title = 'my-app';
+  title = 'my-apasdasdp';
   constructor(){
-    console.log('asdsdfsasddasd');
+    console.log('asdsdfsasdasdasddasd');
   }
   
 }

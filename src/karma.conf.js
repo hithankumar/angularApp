@@ -33,7 +33,7 @@ module.exports = function (config) {
     },
     coverageIstanbulReporter: {
       dir: require('path').join(__dirname, '../coverage'),
-      reports: ['html', 'lcovonly', 'json-summary'],
+      reports: ['html', 'lcovonly', 'json-summary','text'],
       fixWebpackSourcePaths: true
     },
     browserNoActivityTimeout: 120000,
