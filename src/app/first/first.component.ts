@@ -19,7 +19,7 @@ export class FirstComponent {
 
   }
   test23(){
-
+ console.log('test');
   }
   
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TestBed } from '@angular/core/testing';
 
 @Component({
   selector: 'second',
@@ -8,6 +9,9 @@ export class SecondComponent {
   title = 'my-app';
   constructor(){
     console.log('asdsasdddfsdssasdasddfsdasdasdfdfsdfsdasd');
+    this.test();
   }
-  
+  test(){
+      
+  }
 }
