@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 export class FirstComponent {
   title = 'my-apasdaasdasdsdp';
   constructor(){
-    console.log('asdsdfsasdaasdasdasdasdasdasdasdasdsdasddasd');
+    console.log('asdsdfssdfasdaasdasdasdasdasdasdasdasdsdasddasd');
     this.test();
     this.test1();
     this.test23();
