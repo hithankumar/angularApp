@@ -51,6 +51,7 @@
         "jasmine": "~2.5.2",
         "jasmine-core": "~2.5.2",
         "jasmine-spec-reporter": "~4.2.1",
+        "json": "^9.0.6",
         "json2csv": "^3.11.5",
         "karma": "^1.7.1",
         "karma-chrome-launcher": "^2.2.0",
