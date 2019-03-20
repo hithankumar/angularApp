@@ -8,7 +8,7 @@ import { TestBed } from '@angular/core/testing';
 export class SecondComponent {
   title = 'my-app';
   constructor(){
-    console.log('asd');
+    console.log('asdasd');
     this.test();
   }
   test(){
