@@ -12,6 +12,9 @@ export class SecondComponent {
     this.test();
   }
   test(){
+      this.test2();
+  }
+  test2(){
       
   }
 }
