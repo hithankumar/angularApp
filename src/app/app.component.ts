@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'my-app';
   constructor(){
-    console.log('asdsdfsdasd');
+    console.log('asdsdfsdaasdsd');
   }
   
 }
