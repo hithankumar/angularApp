@@ -24,13 +24,12 @@ cd "/Users/hnandaku/.jenkins/workspace/first-ci/coverage"
 
 for file in $files; do
  	latestComittedFile=${FILEPATH}${file}
-	echo ${latestComittedFile}
  	coveragePerFile=$(node -pe 'JSON.parse(process.argv[1])[process.argv[2]].statements.pct' "$(cat coverage-summary.json)" "${latestComittedFile}")
  	if (($(bc <<< "$coveragePerFile >= $EXPECTED_CODE_COVERAGE_PER_FILE")));
  	then
  		echo 'Code coverage for ' ${latestComittedFile} ' is ' ${coveragePerFile}
  	else
- 		echo 'Code coverage for ' ${latestComittedFile} ' is less than' ${EXPECTED_CODE_COVERAGE_PER_FILE} '. ABORTING BUILD';
+ 		echo 'Code coverage for ' ${latestComittedFile} ' is less than' ${EXPECTED_CODE_COVERAGE_PER_FILE} '. ABORTING BUILD.';
     	exit 1;
         fi;
 done
@@ -46,7 +45,7 @@ then
 
 
 else
-	echo 'Current Coverage report is less than last coverage report.';
+	echo 'Current Coverage report is less than last coverage report. ABORTING BUILD.';
 exit 1;
 fi
 
